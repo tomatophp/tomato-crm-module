@@ -107,6 +107,11 @@ class TomatoCrmServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->loadMigrationsFrom(module_path($this->moduleName, 'Database/migrations'));
 
+        //Publish Model
+        $this->publishes([
+            __DIR__ . '/../../publish/Account.php' => app_path('Models/Account.php'),
+        ], 'tomato-crm-model');
+
         //Register Langs
         $this->loadTranslationsFrom(__DIR__ . '/../../resources/lang', 'tomato-crm');
 

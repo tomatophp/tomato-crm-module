@@ -7,11 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
-use Spatie\Macroable\Macroable;
 use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\Permission\Traits\HasRoles;
-use TomatoPHP\TomatoCrm\Models\Group;
+use Modules\TomatoCrm\App\Models\Group;
 
 /**
  * @property integer $id
@@ -109,7 +108,7 @@ class Account extends Authenticatable implements HasMedia
      */
     public function accountsMetas()
     {
-        return $this->hasMany('TomatoPHP\TomatoCrm\Models\AccountsMeta');
+        return $this->hasMany('Modules\TomatoCrm\App\Models\AccountsMeta');
     }
 
     /**
@@ -131,7 +130,7 @@ class Account extends Authenticatable implements HasMedia
      */
     public function activities()
     {
-        return $this->hasMany('TomatoPHP\TomatoCrm\Models\Activity');
+        return $this->hasMany('Modules\TomatoCrm\App\Models\Activity');
     }
 
     /**
@@ -139,7 +138,7 @@ class Account extends Authenticatable implements HasMedia
      */
     public function comments()
     {
-        return $this->hasMany('TomatoPHP\TomatoCrm\Models\Comment');
+        return $this->hasMany('Modules\TomatoCrm\App\Models\Comment');
     }
 
     /**
@@ -147,7 +146,7 @@ class Account extends Authenticatable implements HasMedia
      */
     public function locations()
     {
-        return $this->hasMany('TomatoPHP\TomatoCrm\Models\Location');
+        return $this->hasMany('Modules\TomatoCrm\App\Models\Location');
     }
 
     public function groups(){
