@@ -3,8 +3,8 @@
 namespace Modules\TomatoCrm\App\Console;
 
 use Illuminate\Console\Command;
+use Modules\TomatoCategory\App\Models\Type;
 use TomatoPHP\ConsoleHelpers\Traits\RunCommand;
-use TomatoPHP\TomatoCategory\Models\Type;
 
 class TomatoCrmInstall extends Command
 {

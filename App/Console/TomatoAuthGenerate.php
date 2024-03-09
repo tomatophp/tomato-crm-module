@@ -4,8 +4,7 @@ namespace Modules\TomatoCrm\App\Console;
 
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Schema;
-use io3x1\LaravelAuthBuilder\Services\GenerateAuth;
-use Modules\Auth\Helpers\Auth\AuthGenerator;
+use Modules\TomatoCrm\App\Services\GenerateAuth;
 
 class TomatoAuthGenerate extends Command
 {
