@@ -49,13 +49,6 @@ class TomatoCrmServiceProvider extends ServiceProvider
                 ->route('admin.contacts.index')
                 ->icon('bx bxs-phone');
         }
-        if (config('tomato-crm.features.activites')) {
-            $menus[] = Menu::make()
-                ->group(__('CRM'))
-                ->label(__('Activites'))
-                ->route('admin.activities.index')
-                ->icon('bx bxs-history');
-        }
         if (config('tomato-crm.features.notifications')) {
             $menus[] = Menu::make()
                 ->group(__('CRM'))
@@ -101,6 +94,7 @@ class TomatoCrmServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->registerConfig();
         $this->registerCommands();
         $this->registerCommandSchedules();
         $this->registerTranslations();
