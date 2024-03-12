@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Event;
 use Illuminate\Support\ServiceProvider;
 use Modules\TomatoCategory\App\Facades\TomatoCategory;
 use Modules\TomatoCategory\App\Services\Contracts\Type;
+use Modules\TomatoCrm\App\Console\TomatoCrmInstall;
 use Modules\TomatoCrm\App\Events\SendOTP;
 use Modules\TomatoCrm\App\Services\BuildAuth;
 use Modules\TomatoCrm\App\Services\TomatoCRM;
@@ -94,6 +95,10 @@ class TomatoCrmServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
+        $this->commands([
+            TomatoCrmInstall::class
+        ]);
+
         $this->registerConfig();
         $this->registerCommands();
         $this->registerCommandSchedules();
