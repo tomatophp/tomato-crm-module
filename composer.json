@@ -50,6 +50,7 @@
         "tomatophp/tomato-notifications-module": "^1.0",
         "tomatophp/tomato-translations-module": "^1.0",
         "joshbrw/laravel-module-installer": "^2.0",
-        "nwidart/laravel-modules": "^10.0"
+        "nwidart/laravel-modules": "^10.0",
+        "spatie/macroable": "^2.0"
     }
 }
