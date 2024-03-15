@@ -59,7 +59,7 @@ class GroupTable extends AbstractTable
             ->withGlobalSearch(label: trans('tomato-admin::global.search'),columns: ['id','name',])
             ->bulkAction(
                 label: trans('tomato-admin::global.crud.delete'),
-                each: fn (\Modules\groups\Entities\Group $model) => $model->delete(),
+                each: fn (\Modules\TomatoCrm\App\Models\Group $model) => $model->delete(),
                 after: fn () => Toast::danger(__('Group Has Been Deleted'))->autoDismiss(2),
                 confirm: true
             )

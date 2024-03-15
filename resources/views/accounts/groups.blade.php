@@ -1,4 +1,4 @@
-<x-tomato-admin-container label="{{__('Assine Accounts To Group')}}">
+<x-tomato-admin-container label="{{__('Assign Accounts To Group')}}">
     <x-splade-form :default="['ids'=>$ids, 'groups' => []]" class="flex flex-col space-y-4" action="{{route('admin.accounts.groups.store')}}" method="post">
         <x-splade-select choices multiple :options="$groups" option-value="id" option-label="name"  label="{{__('Groups')}}" name="groups" placeholder="{{__('Groups')}}" autosize />
 

@@ -43,7 +43,7 @@
         @endforeach
 
 
-        <x-splade-checkbox label="{{  __('Activated') }}" name="is_active" label="{{  __('Activated') }}" />
+        <x-splade-checkbox label="{{ __('Activated') }}" name="is_active" />
 
 
         <div class="flex justify-start gap-2 pt-3">
