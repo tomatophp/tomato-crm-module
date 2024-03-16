@@ -38,15 +38,15 @@
                 <x-splade-checkbox label="{{$item['label']}}" name="{{$key}}" placeholder="{{$item['label']}}" />
             @else
                 <x-splade-input :type="$item['type']" label="{{$item['label']}}" name="{{$key}}" placeholder="{{$item['label']}}" />
-             @endif
+            @endif
         @endforeach
 
-        <x-splade-checkbox label="{{  __('Login') }}" name="is_login" label="Login" />
+        <x-splade-checkbox label="{{ __('Login') }}" name="is_login" />
 
         <div v-if="form.is_login">
             <div class="flex flex-col space-y-4">
-                <x-splade-input label="{{__('Password')}}" name="password" type="password"  placeholder="Password" />
-                <x-splade-input name="password_confirmation" type="password"  placeholder="Password Confirmation" />
+                <x-splade-input label="{{__('Password')}}" name="password" type="password"  placeholder="{{__('Password')}}" />
+                <x-splade-input label="{{__('Password Confirmation')}}" name="password_confirmation" type="password"  placeholder="{{__('Password Confirmation')}}" />
             </div>
         </div>
 

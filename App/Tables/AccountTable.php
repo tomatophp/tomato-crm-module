@@ -7,8 +7,8 @@ use Illuminate\Http\Request;
 use ProtoneMedia\Splade\AbstractTable;
 use ProtoneMedia\Splade\Facades\Toast;
 use ProtoneMedia\Splade\SpladeTable;
-use TomatoPHP\TomatoCategory\Models\Type;
-use TomatoPHP\TomatoRoles\Services\TomatoRoles;
+use Modules\TomatoCategory\App\Models\Type;
+use Modules\TomatoRoles\App\Services\TomatoRoles;
 
 class AccountTable extends AbstractTable
 {

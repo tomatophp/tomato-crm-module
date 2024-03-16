@@ -73,7 +73,7 @@ class AccountRequestController extends Controller
                 'status' => 'nullable|max:255|string',
                 'is_approved' => 'nullable'
             ],
-            message: __('AccountRequest updated successfully'),
+            message: __('Account request updated successfully'),
             redirect: 'admin.account-requests.index',
         );
 
@@ -125,7 +125,7 @@ class AccountRequestController extends Controller
                 'status' => 'nullable|max:255|string',
                 'is_approved' => 'nullable'
             ],
-            message: __('AccountRequest updated successfully'),
+            message: __('Account request updated successfully'),
             redirect: 'admin.account-requests.index',
         );
 
@@ -144,7 +144,7 @@ class AccountRequestController extends Controller
     {
         $response = Tomato::destroy(
             model: $model,
-            message: __('AccountRequest deleted successfully'),
+            message: __('Account request deleted successfully'),
             redirect: 'admin.account-requests.index',
         );
 
@@ -194,7 +194,7 @@ class AccountRequestController extends Controller
             }
         }
 
-        Toast::success(__('Account request approvied successfully'))->autoDismiss(2);
+        Toast::success(__('Account request approved successfully'))->autoDismiss(2);
         return redirect()->back();
     }
 
@@ -248,7 +248,7 @@ class AccountRequestController extends Controller
         $model->is_approved = true;
         $model->save();
 
-        Toast::success(__('Account request approvied successfully'))->autoDismiss(2);
+        Toast::success(__('Account request approved successfully'))->autoDismiss(2);
         return redirect()->back();
     }
 }
