@@ -37,7 +37,7 @@ class Contact extends Model
      */
     public function status()
     {
-        return $this->belongsTo('TomatoPHP\TomatoCategory\Models\Type');
+        return $this->belongsTo('Modules\TomatoCategory\App\Models\Type');
     }
 
     /**
@@ -45,7 +45,7 @@ class Contact extends Model
      */
     public function type()
     {
-        return $this->belongsTo('TomatoPHP\TomatoCategory\Models\Type');
+        return $this->belongsTo('Modules\TomatoCategory\App\Models\Type');
     }
 
     /**
